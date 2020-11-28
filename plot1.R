@@ -13,8 +13,9 @@ subPower[1441:2880,"Time"] <- format(subPower[1441:2880,"Time"],"2007-02-02 %H:%
 
 
 
-# create plot 1 
+# create plot 1 and save as .png file
+png("plot1.png", width = 480, height=480)
 with(subPower, hist(Global_active_power, col="red", xlab="Global Active Power (kilowatts)", main="Global Active Power"))
+dev.off()
 
-# save plot as .png file
-png(filename="plot1.png", width = 480, height=480)
+
