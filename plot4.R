@@ -16,8 +16,8 @@ subPower[1441:2880,"Time"] <- format(subPower[1441:2880,"Time"],"2007-02-02 %H:%
 png("plot4.png", width = 480, height=480)
 par(mfrow=c(2,2))
 with(subPower, {
-  plot(Time,Global_active_power,type="l",xlab="",ylab="Global Active Power (kilowatts)") 
-  plot(subPower$Time,subPower$Global_active_power,type="l",xlab="",ylab="Global Active Power (kilowatts)") 
+  plot(Time,Global_active_power,type="l",xlab="",ylab="Global Active Power") 
+  plot(Time,Voltage,type="l",xlab="datetime") 
   plot(subPower$Time,subPower$Sub_metering_1,type="n",xlab="",ylab="Energy sub metering")
     with(subPower,lines(Time,Sub_metering_1, col="black"))
     with(subPower,lines(Time,Sub_metering_2,col="red"))
