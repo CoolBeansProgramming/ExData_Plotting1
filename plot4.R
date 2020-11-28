@@ -17,7 +17,7 @@ png("plot4.png", width = 480, height=480)
 par(mfrow=c(2,2))
 with(subPower, {
   plot(subPower$Time,subPower$Global_active_power,type="l",xlab="",ylab="Global Active Power") 
-  plot(subPower$Time,subPower$Voltage, type="n",ylab="Voltage", xlab="datetime")
+  plot(subPower$Time,subPower$Voltage, type="l",ylab="Voltage", xlab="datetime")
   plot(subPower$Time,subPower$Sub_metering_1,type="n",xlab="",ylab="Energy sub metering")
     with(subPower,lines(Time,Sub_metering_1, col="black"))
     with(subPower,lines(Time,Sub_metering_2,col="red"))
