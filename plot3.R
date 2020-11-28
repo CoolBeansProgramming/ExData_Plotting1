@@ -13,7 +13,7 @@ subPower[1441:2880,"Time"] <- format(subPower[1441:2880,"Time"],"2007-02-02 %H:%
 
 
 
-# create plot 2 and save as .png file 
+# create plot 3 and save as .png file 
 png("plot3.png", width = 480, height=480)
 plot(subPower$Time,subPower$Sub_metering_1,type="n",xlab="",ylab="Energy sub metering")
 with(subPower,lines(Time,Sub_metering_1, col="black"))
